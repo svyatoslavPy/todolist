@@ -32,6 +32,8 @@ export const TodoList = () => {
       ...todoList,
       {
         title: newTitle,
+        checked: false,
+        id: Date.now(),
       },
     ]);
   };
