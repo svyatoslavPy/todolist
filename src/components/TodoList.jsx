@@ -28,14 +28,16 @@ export const TodoList = () => {
   };
 
   const handlerAddTodo = () => {
-    setTodoList([
-      ...todoList,
-      {
-        title: newTitle,
-        checked: false,
-        id: Date.now(),
-      },
-    ]);
+    if (newTitle) {
+      setTodoList([
+        ...todoList,
+        {
+          title: newTitle,
+          checked: false,
+          id: Date.now(),
+        },
+      ]);
+    }
   };
 
   const handlerDeleteTodo = (id) => {
